@@ -1,0 +1,17 @@
+CREATE DATABASE UsersDB
+use UsersDB
+
+CREATE TABLE Users(
+Id INT NOT NULL IDENTITY PRIMARY KEY,
+Login VARCHAR(50) UNIQUE NOT NULL,
+Password VARCHAR(50) NOT NULL,
+Address VARCHAR(100),
+Phone VARCHAR(11),
+IsAdmin BIT NOT NULL
+)
+
+INSERT INTO Users
+VALUES('login','password','address','88005553535',1);
+
+INSERT INTO Users
+VALUES('superLogin','password','address','88005553535',0);

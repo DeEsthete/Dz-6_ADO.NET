@@ -1,0 +1,20 @@
+﻿<Window x:Class="Dz_6_AdoNet.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dz_6_AdoNet"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <ListBox Name="usersListBox" HorizontalAlignment="Left" Height="279" Margin="10,30,0,0" VerticalAlignment="Top" Width="497">
+            <ListBox.ContextMenu>
+                <ContextMenu Name="usersContextMenu">
+                    <MenuItem Header="Добавить" Click="MenuItemAddClick"></MenuItem>
+                    <MenuItem Header="Удалить" Click="MenuItemDeleteClick"></MenuItem>
+                </ContextMenu>
+            </ListBox.ContextMenu>
+        </ListBox>
+        <CheckBox Name="displayAdmin" Content="Отображать только администраторов" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Checked="DisplayAdminChecked" Unchecked="DisplayAdminUnchecked"/>
+    </Grid>
+</Window>
